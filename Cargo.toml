@@ -1,0 +1,27 @@
+[package]
+name = "webgl_wasm_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+web-sys = { version = "0.3.7", features = [
+  "WebGlProgram",
+  "WebGlRenderingContext",
+  "WebGlUniformLocation",
+  "Document",
+  "HtmlCanvasElement",
+  "Window",
+  "WebGlRenderingContext",
+  "WebGlProgram",
+  "WebGlShader",
+  "Performance",
+  "WebGlBuffer",
+] }
+wasm-bindgen = "0.2"
+js-sys = "0.3.7"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
